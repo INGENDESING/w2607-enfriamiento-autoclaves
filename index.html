@@ -4,18 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portal técnico del proyecto W2607: diagnóstico, simulación hidráulica e ingeniería conceptual del sistema de enfriamiento de autoclaves de Baxter.">
-  <meta name="theme-color" content="#f0eee6">
+  <meta name="theme-color" content="#f3f6f8">
   <title>W2607 · Sistema de enfriamiento de autoclaves</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#inicio" aria-label="W2607, inicio">
         <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span>W2607</span>
+        <span class="brand-copy"><strong>W2607</strong><small>Ingeniería de procesos</small></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span>Menú</span><span class="menu-lines" aria-hidden="true"></span>
@@ -35,13 +37,13 @@
     <section id="inicio" class="hero section-shell">
       <div class="hero-copy reveal">
         <p class="eyebrow">Baxter · Cali, Colombia <span>Proyecto W2607</span></p>
-        <h1>Enfriar el proceso.<br>Cuidar cada lote.</h1>
+        <h1>Enfriar el proceso.<br><span>Cuidar cada lote.</span></h1>
         <p class="hero-lead">Diagnóstico, simulación hidráulica e ingeniería conceptual para que el sistema de enfriamiento de autoclaves opere con caudal suficiente, estabilidad y trazabilidad de principio a fin.</p>
         <div class="hero-actions">
-          <a class="button button-dark" href="#proyecto">Explorar el proyecto</a>
-          <a class="text-link" href="#documentos">Ver informe REV0 <span aria-hidden="true">→</span></a>
+          <a class="button button-dark" href="#proyecto">Explorar el proyecto <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#documentos">Ver informe REV0 <span aria-hidden="true">↗</span></a>
         </div>
-        <p class="status-line"><span class="status-dot"></span> Borrador técnico actualizado al 08 de noviembre de 2026</p>
+        <p class="status-line"><span class="status-dot"></span> Borrador técnico · actualizado el <time datetime="2026-11-08">08 de noviembre de 2026</time></p>
       </div>
       <div class="hero-visual reveal" aria-label="Esquema funcional del sistema de enfriamiento">
         <div class="visual-heading"><span>Arquitectura documentada</span><span>E3PRO · R1</span></div>
@@ -49,8 +51,8 @@
           <title id="map-title">Mapa funcional del sistema</title>
           <desc id="map-desc">La piscina alimenta ocho bombas y el colector CS150. Diez intercambiadores conectan el circuito de agua con nueve autoclaves. El retorno conduce calor a tres torres.</desc>
           <defs>
-            <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#8c5b45"/></marker>
-            <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#55747a"/></marker>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#176b87"/></marker>
+            <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2a7f8c"/></marker>
           </defs>
           <path d="M155 108 H258" class="flow-line" marker-end="url(#arrow)"/>
           <path d="M408 108 H500" class="flow-line" marker-end="url(#arrow)"/>
@@ -74,6 +76,28 @@
         <article><strong>10,1–63,4</strong><span>m · TDH reportado de bombas</span></article>
         <article><strong>99,8</strong><span>kWh/t · 121 → 35 °C</span></article>
         <article><strong>6</strong><span>semanas · 6 fases contractuales</span></article>
+      </div>
+    </section>
+
+    <section class="partner-strip section-shell reveal" aria-labelledby="partners-title">
+      <div class="partner-heading">
+        <p class="eyebrow">Colaboración técnica</p>
+        <h2 id="partners-title">Una misma lectura del sistema.</h2>
+        <p>Cliente, levantamiento de campo y consultoría de ingeniería.</p>
+      </div>
+      <div class="partner-logos">
+        <figure class="partner-logo partner-baxter">
+          <div class="partner-logo-frame"><img src="assets/logos/baxter.png" alt="Baxter" width="900" height="168" loading="lazy" decoding="async"></div>
+          <figcaption><strong>Baxter</strong><span>Cliente y operación</span></figcaption>
+        </figure>
+        <figure class="partner-logo partner-e3pro">
+          <div class="partner-logo-frame"><img src="assets/logos/e3pro.png" alt="E3PRO" width="640" height="640" loading="lazy" decoding="async"></div>
+          <figcaption><strong>E3PRO</strong><span>Levantamiento y campo</span></figcaption>
+        </figure>
+        <figure class="partner-logo partner-jagdesign">
+          <div class="partner-logo-frame"><img src="assets/logos/jagdesign.png" alt="JAGDESIGN" width="706" height="418" loading="lazy" decoding="async"></div>
+          <figcaption><strong>JAGDESIGN</strong><span>Consultoría y diagnóstico</span></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -161,7 +185,7 @@
           <h2>Lo que sabemos. Lo que todavía debemos demostrar.</h2>
           <p>Cada observación se convierte en una pregunta verificable. Ninguna hipótesis se presenta como causa raíz confirmada.</p>
         </div>
-        <div class="filter-bar reveal" role="group" aria-label="Filtrar hallazgos"><button class="filter-button active" type="button" data-filter="all" aria-pressed="true">Todos</button><button class="filter-button" type="button" data-filter="hidraulica" aria-pressed="false">Hidráulica</button><button class="filter-button" type="button" data-filter="termica" aria-pressed="false">Térmica</button><button class="filter-button" type="button" data-filter="datos" aria-pressed="false">Datos y control</button></div>
+        <div class="filter-bar reveal" role="group" aria-label="Filtrar hallazgos"><button class="filter-button active" type="button" data-filter="all" aria-pressed="true">Todos</button><button class="filter-button" type="button" data-filter="hidraulica" aria-pressed="false">Hidráulica</button><button class="filter-button" type="button" data-filter="termica" aria-pressed="false">Térmica</button><button class="filter-button" type="button" data-filter="datos" aria-pressed="false">Datos y control</button><span class="filter-status" id="filter-status" role="status" aria-live="polite">6 hallazgos visibles</span></div>
         <div class="findings-grid reveal">
           <article class="finding-card" data-category="hidraulica"><span class="finding-tag">Hidráulica · documentado</span><h3>Cabezales de 10,1 a 63,4 m</h3><p>La dispersión justifica estudiar la interacción en paralelo. No demuestra operación en <em>shut-off</em> sin caudal individual, presiones y velocidad.</p><span class="finding-test">Prueba: curvas ajustadas + ensayo 1/2/3 bombas</span></article>
           <article class="finding-card" data-category="hidraulica"><span class="finding-tag">Hidráulica · por validar</span><h3>Bypass semiestrangulado</h3><p>La configuración sugiere recirculación y posible distorsión térmica. Reubicarlo sin medir su caudal rompería la trazabilidad del balance.</p><span class="finding-test">Prueba: Q bombas = Q autoclaves + Q bypass + Q otros</span></article>
@@ -249,6 +273,7 @@
 
   <footer class="site-footer"><div class="section-shell footer-inner"><div><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>W2607</span></a><p>Sistema de enfriamiento de autoclaves · Baxter, Cali</p></div><div><p>JAGDESIGN / Proyectos JAG · E3PRO · PRODITEC</p><p>Portal técnico estático · Actualización 08/11/2026</p></div><button class="print-button" type="button" id="print-page">Imprimir resumen ↗</button></div></footer>
 
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Volver al inicio" hidden><span aria-hidden="true">↑</span><span>Volver arriba</span></button>
   <dialog class="image-dialog" id="image-dialog" aria-label="Vista ampliada de gráfica"><button class="dialog-close" type="button" aria-label="Cerrar vista ampliada">Cerrar ×</button><img src="assets/graficas/potencia_termica_colector.png" alt="Gráfica ampliada"></dialog>
 </body>
 </html>
